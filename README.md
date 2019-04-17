@@ -1,16 +1,19 @@
 # itunesmoviessearch
 
-A new Flutter project.
+A simple iTunes movie serach project made with Flutter.
 
-## Getting Started
+The following dependencies are used (this can be found in the pubspec.yaml file along with other assets): 
+http: ^0.12.0
+path_provider: ^0.5.0+1
+cached_network_image:^0.7.0
 
-This project is a starting point for a Flutter application.
+Description:
+The app gets JSON from the iTunes Search API, it will then save it as a JSON file to the local directory for offline access
 
-A few resources to get you started if this is your first Flutter project:
+Images are then loaded using cachednetworkimage which will save the images to cache for easy loading and offline availability
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+The default search for first-time launch is https://itunes.apple.com/search?term=star&amp;country=au&amp;media=movie
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+However, the user can change this by using the search function at header, this will also save and overwrite the current search term to update persistence
+
+
